@@ -1,0 +1,49 @@
+<!--
+Tarin James
+CSE121b
+Summary: A quiz that fetches questions based on the users desired topic and difficulty.
+The correct answer is randomized throughout and a score is kept. The user can run the 
+quiz over and over again. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Random Quiz</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="Final.js"></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>The Random Quiz</h1>
+
+        <select id="topic">
+            <option value="">--Choose a Topic--</option>
+            <option value="9">General Knowledge</option>
+            <option value="27">Animals</option>
+            <option value="25">Art</option>
+        </select>
+
+        <select id="difficulty">
+            <option value="">--Choose a Difficulty--</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <button id="start-button" onclick="startQuiz()">Start Quiz</button>
+         
+
+        <div class="question">
+            <p id="question-text"></p>
+        </div>
+
+        <div class="answers">
+            <div id="answer1" class="answer" onclick="selectAnswer(event)"></div>
+            <div id="answer2" class="answer" onclick="selectAnswer(event)"></div>
+            <div id="answer3" class="answer" onclick="selectAnswer(event)"></div>
+            <div id="answer4" class="answer" onclick="selectAnswer(event)"></div>
+        </div>
+        <button id="start-over-button" style="display: none;" onclick="startOver()">Start Over</button>
+    </div>
+</body>
+</html>
