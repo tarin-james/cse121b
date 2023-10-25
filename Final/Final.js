@@ -46,7 +46,7 @@ function questionDisplay() {
         answers.splice(randomNumber, 0, question.correct_answer);
         answerElementList = document.querySelectorAll(".answer");
         
-        answerElementList.foreach((answerElement, index) => {
+        answerElementList.forEach((answerElement, index) => {
             answerElement.innerHTML = answers[index];
         });
     } 
